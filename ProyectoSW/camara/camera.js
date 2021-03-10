@@ -2,7 +2,7 @@ const cam = require('foscam');
 let fs = require('fs');
 
 cam.setup({
-    host: '192.168.0.24:4747',
+    host: '192.168.0.15:4747',
     port: 4747,
 
   });

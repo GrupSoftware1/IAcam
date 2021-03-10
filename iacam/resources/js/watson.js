@@ -11,7 +11,8 @@ function obtener(){
       console.log(data.ruta)
         
        var img = data.ruta;
-       imagen.innerHTML = ` <img id="picture" class="picture"  width="300" height="250"  src="<?php echo site_url('${img}');?>" >`
+       imagen.innerHTML = ` <img id="picture" class="picture"  width="300" height="250" src="/resources/js/${img}">`
+       //imagen.innerHTML = ` <img id="picture" class="picture"  width="300" height="250"  src="<?php echo site_url('${img}');?>" >`
        var name = data.watson.images[0].objects.collections[0].objects[0].object
       
        if (request.status >= 200 && request.status < 400) {

@@ -39,9 +39,9 @@
                          <div class="picture-container" id="imagen"> 
                              <script src="<?php echo site_url('resources/js/watson.js');?>"></script>
                             
-                            
-                                <img src="<?php echo site_url('resources/js/1.jpg'); ?>" />
-                            <!--  <img src="&lt;?php echo base_url(); ?&gt;images/1.jpg" />    --> 
+                            <!-- 
+                            <img src="<?php echo site_url('resources/js/1.jpg'); ?>" />
+                             <img src="&lt;?php echo base_url(); ?&gt;images/1.jpg" />    --> 
                             
                             
                         </div>
