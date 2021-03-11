@@ -12,7 +12,7 @@ function obtener(){
       console.log(data.ruta)
       //console.log(data.watson.images[0].objects.collections[0].objects[0].objects) 
        var img = data.ruta;
-       imagen.innerHTML = ` <img id="picture" class="picture"  width="430" height="300" src="/resources/js/${img}">`
+       imagen.innerHTML = ` <img id="picture" class="picture"  width="450" height="400" src="/resources/js/${img}">`
        //imagen.innerHTML = ` <img id="picture" class="picture"  width="300" height="250"  src="<?php echo site_url('${img}');?>" >`
        
       
@@ -20,7 +20,7 @@ function obtener(){
         let jsonSpecificValue = (dtt.watson.images[0].objects.collections[0].objects && 
           dtt.watson.images[0].objects.collections[0].objects.length > 0) ? dtt.watson.images[0].objects.collections[0].objects[0].value || false : false;
 
-        console.log(jsonSpecificValue);
+       // console.log(jsonSpecificValue);
         
           if (!jsonSpecificValue) {
             var name =    data.watson.images[0].objects.collections[0].objects[0].object
@@ -41,16 +41,16 @@ function obtener(){
              */
             
             var dimImg = data.watson.images[0].dimensions;
-            var scaleH =  (dim.height * 250 ) / dimImg.height;
-            var scaleW = (dim.width * 300) / dimImg.width;
-            var scaleT = (dim.top * 300) / dimImg.width;
-            var scaleL = (dim.left * 250) / dimImg.height;
+            var scaleH =  (dim.height * 400 ) / dimImg.height;
+            var scaleW = (dim.width * 450) / dimImg.width;
+            var scaleT = (dim.top * 450) / dimImg.width;
+            var scaleL = (dim.left * 400) / dimImg.height;
             imagen.innerHTML += `
            
     
             <div style="position: absolute;
             border: 2px solid #FFF;
-            position: center;
+            position: absolute;
             left :      ${scaleL}px;
             top :      ${scaleT}px;
             width:    ${scaleW}px;
