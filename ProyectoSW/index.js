@@ -13,7 +13,7 @@ var i = 1;
 var NodeWebcam = require('./camara/cam')
 var Webcam = NodeWebcam.create({
   callbackReturn: "base64",
-  saveShots: false
+  saveShots: true
 });
 ////////////////
 
@@ -46,9 +46,10 @@ app.post('/droid',(req,res)=>{
     Webcam.capture( i.toString(), function( err, data ) {
         if( err ) {
             throw err;
-        }
+        }else
         watson.consultar(data).then(response=>{
           console.log(JSON.stringify(response))
+          
           console.log('POST A /DROID')
           res.send(response)
         });

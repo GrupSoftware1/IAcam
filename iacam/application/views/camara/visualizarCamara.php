@@ -1,14 +1,14 @@
 <style>
    .picture-container {
-            position: relative;
-            width: 300;
-            height: 250px;
+            position: center;
+            width: 450px;
+            height: 320px;
             margin: 20px auto;
             border: 10px solid #fff;
             box-shadow: 0 5px 5px #000;
         }
         .container {
-    width: 100%;
+    width: 480px;
     height: 480px;
 }
 .iframe-class {
